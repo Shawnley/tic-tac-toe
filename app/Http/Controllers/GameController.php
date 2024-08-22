@@ -51,12 +51,12 @@ class GameController extends Controller
             $updatedGame = $this->gameService->makeMove($game, $piece, $request->x, $request->y);
 
             // If the game is still ongoing, make an AI move
-            if (!$updatedGame->victory && $request->opponent === 'ai') {
+            if (!$updatedGame->victory && !$this->gameService->isBoardFull($updatedGame->board) && $request->opponent === 'ai') {
                 $updatedGame = $this->gameService->makeAIMove($game, $updatedGame->current_turn);
             }
 
             // Use the GameTransformerService to format the response
-            $formattedResponse = $this->gameTransformerService->transform($game);
+            $formattedResponse = $this->gameTransformerService->transform($updatedGame);
 
             return response()->json($formattedResponse);
         } catch (\Exception $e) {

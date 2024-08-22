@@ -84,9 +84,7 @@ class GameService
         ]);
 
         foreach ($winningCombinations as $combination) {
-            $a = $combination[0];
-            $b = $combination[1];
-            $c = $combination[2];
+            [$a, $b, $c] = $combination;
 
             if (
                 $board[$a[0]][$a[1]] !== "" &&
@@ -241,7 +239,7 @@ class GameService
      * @param array $board
      * @return bool
      */
-    private function isBoardFull(array $board)
+    public function isBoardFull(array $board)
     {
         return collect($board)->flatten()->every(fn($cell) => $cell !== "");
     }

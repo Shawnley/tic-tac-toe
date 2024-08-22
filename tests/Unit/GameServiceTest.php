@@ -122,4 +122,22 @@ class GameServiceTest extends TestCase
         // Check that 'o' made a valid move
         $this->assertTrue(in_array('o', array_merge(...$game->board)));
     }
+
+    public function test_ai_makes_winning_move()
+    {
+        // Assuming you have a method for AI move in the GameService
+        $game = $this->gameService->getGame();
+
+        // Simulate a winning move for 'o'
+        $game->board = [
+            ['x', 'x', ''],
+            ['o', 'o', ''],
+            ['', '', '']
+        ];
+        $game->current_turn = 'o';
+        $game = $this->gameService->makeAiMove($game, 'o');
+
+        // Check that 'o' made a winning move
+        $this->assertEquals('o', $game->victory);
+    }
 }

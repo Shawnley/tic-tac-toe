@@ -5,6 +5,7 @@ This is a simple Tic-Tac-Toe game built using Laravel for the backend and React 
 ## Live Demo
 Check out the live demo of the Tic-Tac-Toe game [here](https://tic-tac-toe.shawnley.dk).
 
+[![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2F182bf856-95fd-4a7f-b650-175f2508cdb1%3Flabel%3D1%26commit%3D1&style=for-the-badge)](https://forge.laravel.com/servers/835405/sites/2445897)
 
 
 ## Features

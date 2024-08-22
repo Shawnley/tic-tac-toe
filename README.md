@@ -34,7 +34,7 @@ Check out the live demo of the Tic-Tac-Toe game [here](https://tic-tac-toe.shawn
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/tic-tac-toe.git
+git clone https://github.com/shawnley/tic-tac-toe.git
 cd tic-tac-toe
 ```
 

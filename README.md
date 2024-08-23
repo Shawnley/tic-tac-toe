@@ -18,7 +18,7 @@ Check out the live demo of the Tic-Tac-Toe game [here](https://tic-tac-toe.shawn
 
 ## Technologies Used
 
-- **Backend**: Laravel 9, PHP 8.x
+- **Backend**: Laravel 11, PHP 8.x
 - **Frontend**: React, Vite, Tailwind CSS
 - **Database**: MySQL (or any database supported by Laravel)
 - **Testing**: PHPUnit
